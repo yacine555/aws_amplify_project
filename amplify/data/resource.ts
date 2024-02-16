@@ -1,13 +1,13 @@
 import { type ClientSchema, a, defineData } from '@aws-amplify/backend';
 
-/*======================================================================
-The section creates a Todo database table with the fields "content", "done", "priority".
+/*== STEP 1 ===============================================================
+The section below creates a Todo database table with set of fields.
 =========================================================================*/
 const schema = a.schema({
   Todo: a
     .model({
       content: a.string(),
-      done: a.boolean(),
+      done:a.boolean(),
       priority: a.enum(['low','medium','high'])
     })
     .authorization([a.allow.owner()]),
@@ -18,11 +18,11 @@ export type Schema = ClientSchema<typeof schema>;
 export const data = defineData({
   schema,
   authorizationModes: {
-    defaultAuthorizationMode: 'userPool'
+    defaultAuthorizationMode: 'userPool',
   },
 });
 
-/*========================================================================
+/*== STEP 2 ===============================================================
 Go to your frontend source code. From your client-side code, generate a
 Data client to make CRUDL requests to your table. (THIS SNIPPET WILL ONLY
 WORK IN THE FRONTEND CODE FILE.)
