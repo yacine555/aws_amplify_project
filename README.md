@@ -1,6 +1,6 @@
 # Description
 
-This is a [Next.js](https://nextjs.org/) project for AWS amplify Gen2, following this [tutorial](https://docs.amplify.aws/gen2/start/quickstart/nextjs-pages-router/)
+This is a [Next.js](https://nextjs.org/) project for AWS amplify Gen2, following this [tutorial](https://docs.amplify.aws/gen2/start/quickstart/nextjs-app-router-server-components/)
 
 ## Requirements
 Nodejs 20.x, tested on 20.11.0
@@ -13,12 +13,6 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
